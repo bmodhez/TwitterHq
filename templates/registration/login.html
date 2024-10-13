@@ -1,0 +1,16 @@
+{% extends "layout1.html" %}
+
+{% block title %}
+Bhavin's Mega Project
+{% endblock %}
+
+{% block content %}
+
+<h1 class = "text-center text-white mt-4">Login To See the Tweet</h1>
+<form method="post">
+        {% csrf_token %}
+        {{ form.as_p }} 
+        <button class = "btn btn-primary mt-3">Login</button>
+</form>
+<h5 class ="mt-4">Don't have an account? <a href="{% url 'register' %}">Register Here</a></h5>
+{% endblock %}
